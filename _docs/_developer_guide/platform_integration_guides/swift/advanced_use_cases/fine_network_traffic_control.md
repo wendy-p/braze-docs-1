@@ -1,8 +1,7 @@
 ---
-hidden: true
 nav_title: Fine Network Traffic Control
 article_title: Fine Network Traffic Control for iOS
-platform: iOS
+platform: Swift
 page_order: 1
 description: "This article covers implementing fine network traffic control for your iOS application."
 
