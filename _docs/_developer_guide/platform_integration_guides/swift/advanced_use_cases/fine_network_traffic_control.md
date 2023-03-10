@@ -15,7 +15,7 @@ Braze allows the user the option to control network traffic using the following 
 
 ### Automatic request processing
 
-***`ABKRequestProcessingPolicy` enum value: `ABKAutomaticRequestProcessing`***
+***`RequestPolicy` enum value: `automatic`***
 
 - This is the **default request policy** value.
 - The Braze SDK will automatically handle all server communication, including:
@@ -28,17 +28,17 @@ Braze allows the user the option to control network traffic using the following 
 Data can be manually flushed to Braze's servers at any time using the following method:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[[Appboy sharedInstance] flushDataAndProcessRequestQueue];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
+AppDelegate.braze?.requestImmediateDataFlush()
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze requestImmediateDataFlush];
 ```
 
 {% endtab %}
@@ -46,105 +46,53 @@ Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 
 ### Manual request processing
 
-***`ABKRequestProcessingPolicy` enum value: `ABKManualRequestProcessing`***
+***`RequestPolicy` enum value: `manual`***
 
 - This protocol is the same as automatic request processing except:
     - Custom attributes and custom event data are not automatically flushed to the server throughout the user session.
-- Braze will still perform automatic network requests for internal features, such as requesting in-app messages, Liquid templating in in-app messages, Geofences, and location tracking. For more details, see the `ABKRequestProcessingPolicy` declaration in [`Appboy.h`][4]. When these internal requests are made, locally stored custom attributes and custom event data may be flushed to the Braze server, depending on the request type.
+- Braze will still perform automatic network requests for internal features, such as requesting in-app messages, Liquid templating in in-app messages, Geofences, and location tracking. For more details, see the `Braze.Configuration.Api.RequestPolicy.manual` [documentation][4]. When these internal requests are made, locally stored custom attributes and custom event data may be flushed to the Braze server, depending on the request type.
 
 Data can be manually flushed to Braze's servers at any time using the following method:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[[Appboy sharedInstance] flushDataAndProcessRequestQueue];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
+AppDelegate.braze?.requestImmediateDataFlush()
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze requestImmediateDataFlush];
 ```
 
 {% endtab %}
 {% endtabs %}
-
 ## Setting the request processing policy
 
 ### Set request policy on startup
 
-These policies can be set at app startup time from the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][3] method. In the `appboyOptions` dictionary, set the `ABKRequestProcessingPolicyOptionKey` as shown in the following code snippet:
+These policies can be set at app startup time from the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][3] method. In the `configuration` object, set the `Braze.Configuration.Api.RequestPolicy` as shown in the following code snippet:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-NSDictionary *appboyOptions = @{
-  // Other entries
-  ABKRequestProcessingPolicyOptionKey : @(ABKAutomaticRequestProcessing)
-};
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
-let appboyOptions: [AnyHashable: Any] = [
-  // Other entries
-  ABKRequestProcessingPolicyOptionKey: ABKRequestProcessingPolicy.automaticRequestProcessing.rawValue
-]
+configuration.api.requestPolicy = .automatic
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+configuration.api.requestPolicy = .automatic;
 ```
 
 {% endtab %}
 {% endtabs %}
 
-### Set request policy at runtime
-
-The request processing policy can also be set during runtime via the `requestProcessingPolicy` property on `Appboy`:
-
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-// Sets the request processing policy to automatic (the default value)
-[Appboy sharedInstance].requestProcessingPolicy = ABKAutomaticRequestProcessing;
-```
-
-{% endtab %}
-{% tab swift %}
-
-```swift
-// Sets the request processing policy to automatic (the default value)
-Appboy.sharedInstance()?.requestProcessingPolicy = ABKRequestProcessingPolicy.automaticRequestProcessing
-```
-
-{% endtab %}
-{% endtabs %}
-
-## Manual shutdown of in-flight server communication
-
-If at any time an "in-flight" server communication needs to be halted, you must call the following method:
-
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[[Appboy sharedInstance] shutdownServerCommunication];
-```
-
-{% endtab %}
-{% tab swift %}
-
-```swift
-Appboy.sharedInstance()?.shutdownServerCommunication();
-```
-
-{% endtab %}
-{% endtabs %}
-
-After calling this method, you must reset the request processing mode to automatic. For this reason, we only recommend calling this if the OS is forcing you to stop background tasks or something similar.
 
 [3]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24
-[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
+[4]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/api-swift.class/requestpolicy-swift.enum/manual
