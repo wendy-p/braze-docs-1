@@ -24,9 +24,9 @@ Go to **Messaging** > **Canvas**, then click **Create Canvas**.
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Canvas** under **Engagement**.
 {% endalert %}
 
-## Step 2: Use the entry wizard to set up your Canvas
+## Step 2: Set up your Canvas
 
-The Entry Wizard will guide you through setting up your Canvas—everything from naming it to setting conversion events and bringing the right users into your customer journey. Click on each of the following tabs to see what settings you can adjust in each of the Entry Wizard steps.
+The Canvas builder will guide you through setting up your Canvas—everything from naming it to setting conversion events and bringing the right users into your customer journey. Click on each of the following tabs to see what settings you can adjust in each of these steps.
 
 {% tabs local %}
   {% tab Basics %}
@@ -77,11 +77,9 @@ Here, you'll name your Canvas, assign [Teams]({{site.baseurl}}/user_guide/admini
 Tag your Canvases so they're easy to find and build reports out of. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), you can filter by particular tags.
 {% endalert %}
 
-![][51]
-
 #### Choose conversion events
 
-Choose your Conversion Event Type, then select the conversions you would like to record. We will use the [Conversion Event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/) that you set from this screen to measure the efficiency of your Canvas. 
+Choose your **Conversion Event Type**, then select the conversions you would like to record. We will use the [Conversion Event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/) that you set from this screen to measure the efficiency of your Canvas. 
 
 ![Primary Conversion Event A with the Makes Purchase conversion event type to record conversations for users who make any purchase within a three day conversion deadline.][52]{: style="max-width:75%;"}
 
