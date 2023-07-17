@@ -15,19 +15,19 @@ guide_top_text: "The [System for Cross-domain Identity Management (SCIM)](http:/
 guide_featured_title: ""
 guide_featured_list:
   - name: "POST: Create Dashboard User Account"
-    link: /docs/post_create_user_account/
+    link: /docs/api/endpoints/scim/post_create_user_account/
     fa_icon: fa-solid fa-circle-plus
   - name: "GET: Look Up Existing Dashboard User Account"
-    link: /docs/get_see_user_account_information/
+    link: /docs/api/endpoints/scim/get_see_user_account_information/
     fa_icon: fa-solid fa-eye
   - name: "GET: Search Existing Dashboard User Account by Email"
-    link: /docs/get_search_existing_dashboard_user_email/
+    link: /docs/api/endpoints/scim/get_search_existing_dashboard_user/
     fa_icon: fa-solid fa-eye
   - name: "PUT: Update Dashboard User Account"
-    link: /docs/post_update_existing_user_account/
+    link: /docs/api/endpoints/scim/put_update_existing_user_account/
     fa_icon: fa-solid fa-pencil
   - name: "DELETE: Remove Dashboard User Account"
-    link: /docs/delete_existing_dashboard_user/
+    link: /docs/api/endpoints/scim/delete_existing_dashboard_user/
     fa_icon: fa-solid fa-trash
 ---
 
