@@ -38,13 +38,12 @@ Name your Segment Extension by describing the type of users you intend to filter
 
 ## Step 3: Choose your criteria
 
-Select between purchase, message engagement, or custom event criteria for targeting. After you've selected the desired event type criteria, choose which purchased item, message interaction, or specific custom event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and how many days to look back, up to 730 days (2 years). Segmentation based on event data from more than 730 days can be done using other filters located in **Segments**.
-
+Select between purchase, message engagement, or custom event criteria for targeting. After you've selected the desired event type criteria, choose which purchased item, message interaction, or specific custom event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and the time period - for Segment Extensions specifically, you can go back up to the past 730 days (2 years). Segmentation based on event data from more than 730 days can be done using other filters located in **Segments**. When choosing your time period, you can specify a relative date range (ie. past X days), a start date, an end date, or an exact date range (date A to date B). 
 ![][3]
 
 ### Event property segmentation
 
-To increase targeting precision, select the **Add Property Filters** checkbox. This will enable you to drill down based on the specific properties of your purchase or custom event. We support event property segmentation based on string, numeric, boolean, and time objects.
+To increase targeting precision, select the **Add Property Filters** checkbox. This will enable you to drill down based on the specific properties of your purchase or custom event. We support event property segmentation based on string, numeric, boolean, and time objects. For string properties, you are able to enter in multiple values at once; in the example below, this filter looks for users with a status equal to any of the following: gold, silver, or bronze.
 
 ![Segmenting based on numeric properties.][13]
 
