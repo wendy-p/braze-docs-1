@@ -14,7 +14,7 @@ channel:
 
 > Inbox Vision allows marketers to view their emails from the perspective of various email clients and mobile devices. 
 
-To test your email message in Inbox Vision, go to the **Preview and Test** tab in your Drag & Drop Editor or HTML email composer. Select **Inbox Vision** and click **Run Inbox Vision**.
+To test your email message in Inbox Vision, go to the **Preview and Test** tab in your drag-and-drop editor or HTML email editor. Select **Inbox Vision** and click **Run Inbox Vision**.
 
 ![][3]{: style="max-width:80%;"}
 
@@ -23,7 +23,7 @@ Braze then sends an HTML version of your email to various email clients used acr
 Select a tile to view the preview in more detail. Your email must include a subject line and a valid sending domain in order to see these previews. Be mindful of how your email can render different on the desktop versus on mobile devices. As you view these previews, you can review your content and ensure that your email is displaying as intended.
 
 {% alert tip %}
-Use Inbox Vision to test for differences across dark and light modes to ensure you get your emails just right!
+Use Inbox Vision to test for differences across dark and light modes to confirm you get your emails just right!
 {% endalert %}
 
 ![Overview of Inbox Vision for the HTML editor.][1]
@@ -36,7 +36,7 @@ In general, your email will not work with Inbox Vision if your email content rel
 
 ## Code analysis
 
-Code analysis is a way for Braze to highlight issues that may exist with your HTML, showing the number of occurrences of each issue and providing insight into which HTML elements are not supported. This information can be found on the **Inbox Vision** tab by selecting <i class="fas fa-list"></i> **List view**. Note that the list view is available for HTML email templates only. If you're using drag-and-drop email templates, check the previews to resolve any possible issues instead.
+Code analysis is a way for Braze to highlight issues that may exist with your HTML, showing the number of occurrences of each issue and providing insight into which HTML elements are not supported. This information can be found on the **Inbox Vision** tab by selecting <i class="fas fa-list"></i> **List view**. This list view is available for HTML email templates only. If you're using drag-and-drop email templates, check the previews to resolve any possible issues instead.
 
 ![Example code analysis on the Inbox Vision preview.][2]
 
@@ -56,7 +56,7 @@ After reviewing these results and making any adjustments to your email campaign,
 
 ## Test accuracy
 
-All of our tests are run through actual email clients. We work hard to ensure that all renderings are as accurate as possible. If you consistently see an issue with an email client, open a [support ticket]({{site.baseurl}}/braze_support/).
+All of our tests are run through actual email clients. Braze works hard to check that all renderings are as accurate as possible. If you consistently see an issue with an email client, open a [support ticket]({{site.baseurl}}/braze_support/).
 
 [1]: {% image_buster /assets/img_archive/inboxvision1.png %}
 [2]: {% image_buster /assets/img_archive/inboxvision2.png %}

@@ -129,15 +129,15 @@ In this case, there are two options that may work better than setting a default 
    {% endif %}
    ```
 
-In this example, a user with a blank or null first name will get the message "Thanks for downloading". You should include a [default value][47] for first name to ensure that your customer does not see Liquid in the event of a mistake.
+In this example, a user with a blank or null first name will get the message "Thanks for downloading". You should include a [default value][47] for first name to make sure that your customer does not see Liquid in the event of a mistake.
 
 {% endraw %}
 
 ## Variable tags
 
-You can use the `assign` tag to create a variable in the message composer. Once you create a variable, you can reference that variable in your messaging logic or message.
+You can use the `assign` tag to create a variable in the message composer. After you create a variable, you can reference that variable in your messaging logic or message.
 
-Let's say that you allow your customers to cash in their rewards points for prizes once they accrue 100 rewards points. So, you only want to message customers who would have a points balance greater than or equal to 100 if they made that additional purchase:
+Let's say that you allow your customers to cash in their rewards points for prizes after they accrue 100 rewards points. So, you only want to message customers who would have a points balance greater than or equal to 100 if they made that additional purchase:
 
 {% raw %}
 ```liquid

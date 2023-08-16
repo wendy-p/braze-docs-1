@@ -81,7 +81,7 @@ Once saved, you can reference this segment during Canvas or campaign creation in
 
 Since mParticle does not directly maintain segments in Braze, it will not delete segments when the corresponding mParticle audience connection is deleted or deactivated. When this happens, mParticle will not update the audience user attributes in Braze to remove the audience from each user.
 
-To remove the audience from a Braze user before deletion, adjust the audience filters to force the audience size to 0 before deleting an audience. After the audience calculation has completed and returns 0 users, delete the audience. This ensures the audience membership updates in Braze to `false` for the single attribute option or removes the audience ID from the array format.
+To remove the audience from a Braze user before deletion, adjust the audience filters to force the audience size to 0 before deleting an audience. After the audience calculation has completed and returns 0 users, delete the audience. Then, the audience membership will update in Braze to `false` for the single attribute option or removes the audience ID from the array format.
 
 ## Data mapping
 
@@ -91,7 +91,7 @@ Regardless of which approach you choose, you must set up Braze as an output:
 
 ### Configure your Braze output settings
 
-In mParticle, navigate to **Setup > Outputs > Add Outputs** and selected **Braze** to open the Braze kit configuration. **Save** once completed.
+In mParticle, navigate to **Setup > Outputs > Add Outputs** and selected **Braze** to open the Braze kit configuration. **Save** when completed.
 
 | Setting name | Description |
 | ------------ | ----------- |
@@ -132,7 +132,7 @@ mParticle's [Braze event kit integration guide](https://docs.mparticle.com/integ
 
 #### Step 3: Connections settings for your Braze output
 
-In mParticle, navigate to **Connections > Connect > [Your desired platform] > Connect Output** to add Braze as an output. **Save** once completed.
+In mParticle, navigate to **Connections > Connect > [Your desired platform] > Connect Output** to add Braze as an output. **Save** when completed.
 
 ![][3]
 
@@ -152,7 +152,7 @@ For server-side data to be forwarded to Braze, it must include an `external_id`;
 
 #### Connections settings for your Braze output
 
-In mParticle, navigate to **Connections > Connect > [Your desired platform] > Connect Output** to add Braze as an output. **Save** once completed. 
+In mParticle, navigate to **Connections > Connect > [Your desired platform] > Connect Output** to add Braze as an output. **Save** when completed. 
 
 ![][4]
 
